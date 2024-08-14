@@ -1,1 +1,2 @@
 # social-platform
+We want to create a virtual space in the style of a social network where users can share their experiences. Each user can create posts to which they can add one or more media items, such as photos and videos. Each post can have one or more tags to categorize the content. Other users can interact with the post by expressing their appreciation through a simple like.
