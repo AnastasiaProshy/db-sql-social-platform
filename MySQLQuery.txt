@@ -57,10 +57,9 @@
 
 5. Sort the users by the total number of likes received on their posts:
 
-    select users.username, count(likes.post_id) as total_likes
-    from users 
-    inner join posts		on users.id = posts.user_id 
-    inner join likes 		on posts.id = likes.post_id 
-    group by users.username
+    select users.username, likes.user_id, count(likes.user_id) as total_likes
+    from likes
+    inner join users        on likes.user_id = users.id 
+    group by likes.user_id
     order by total_likes desc;
 
