@@ -45,12 +45,12 @@
 
 4. Sort users by the number of media uploaded:
 
-    select users.username, count(media_post.media_id) as media_coount
+    select users.username, count(media_post.media_id) as media_count
     from users 
     inner join medias		on users.id = medias.user_id 
     inner join media_post	on medias.id = media_post.media_id
     group by users.username
-    order by media_coount desc;
+    order by media_count desc;
 
 
 
